@@ -1,0 +1,22 @@
+def sum_linkedlist(list1,list2):
+    rem=0
+    list_final=[]
+    sum=0
+    if len(list1)>len(list2):
+        for i in range(len(list2),len(list1)):
+            list2.append(0)
+    elif len(list1)<len(list2):
+        for i in range(len(list1),len(list2)):
+            list1.append(0)
+        
+    
+    for i in range(len(list1)):
+            sum=list1[i]+list2[i]+rem
+            rem=sum//10
+            sum=sum%10
+            list_final.append(sum)
+    print(list_final)
+
+list1=[1,2,3,4,5,6,7]
+list2=[1,8,7]
+sum_linkedlist(list1,list2)
